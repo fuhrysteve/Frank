@@ -3,6 +3,14 @@
 
 img { -ms-interpolation-mode: bicubic; }
 
+.font-size-xx-large { font-size: $font-size-xx-large; }
+.font-size-x-large { font-size: $font-size-x-large; }
+.font-size-large { font-size: $font-size-large; }
+.font-size-medium { font-size: $font-size-medium; }
+.font-size-small { font-size: $font-size-small; }
+.font-size-x-small { font-size: $font-size-x-small; }
+.font-size-xx-small { font-size: $font-size-xx-small; }
+
 .chromeframe {
 	background: $color-light;
 	color: $color-off-black;
@@ -12,6 +20,13 @@ img { -ms-interpolation-mode: bicubic; }
 }
 label {
 	font: #{$font-weight-bold} #{$font-size-small} #{$typeface-secondary};
+}
+
+p {
+	margin: $row-height 0;
+	@extend .font-size-small;
+	&:first-child { margin-top: 0; }
+	&:last-child { margin-bottom: 0; }
 }
 
 #top_bar {
@@ -28,11 +43,9 @@ label {
 }
 
 #prev-post {
-	
 	.arrow {
 		background: $color-midtone inline-image('arrow-left.png') no-repeat 16px 15px;
 	}
-	 
 }
 
 .post-group {

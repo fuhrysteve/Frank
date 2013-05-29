@@ -2,16 +2,54 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
+.font-size-xx-large {
+  font-size: 2.8rem;
+}
+
+.font-size-x-large {
+  font-size: 2.4rem;
+}
+
+.font-size-large {
+  font-size: 2em;
+}
+
+.font-size-medium {
+  font-size: 1.7rem;
+}
+
+.font-size-small, p {
+  font-size: 1.3rem;
+}
+
+.font-size-x-small {
+  font-size: 1.1rem;
+}
+
+.font-size-xx-small {
+  font-size: 1rem;
+}
+
 .chromeframe {
   background: #f0eceb;
   color: #050000;
-  font: 700 13px Sans-Serif;
+  font: 700 1.3rem Sans-Serif;
   padding: 5px 15px;
   text-align: center;
 }
 
 label {
-  font: 700 13px Sans-Serif;
+  font: 700 1.3rem Sans-Serif;
+}
+
+p {
+  margin: 15px 0;
+}
+p:first-child {
+  margin-top: 0;
+}
+p:last-child {
+  margin-bottom: 0;
 }
 
 #top_bar {

@@ -1,3 +1,7 @@
+html{
+  font-size: 62.5%;
+}
+
 body {
 	font: 62.5%/1.6 $typeface-primary;
 	background: $color-highlight;
@@ -140,7 +144,7 @@ dd {
 		font-size: $font-size-x-small; 
 	} 
 }
-		
+
 /*MOBILE*/
 @media only screen and  (max-width: 767px) {
 
@@ -148,9 +152,8 @@ dd {
 		.flush-left {
 			margin-left: 0% !important;
 		}
-		
 		img.flush-left {
-			
+
 			max-width:100% !important;
 		}
 	}

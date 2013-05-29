@@ -25,14 +25,14 @@ Tags: 					brown, red, white, two-columns, fixed-width, sticky-post, custom-menu
   box-shadow: 0px 0px 8px rgba(18, 7, 6, 0.3);
 }
 
-blockquote, pre, .bypostauthor {
+pre, .bypostauthor {
   border: 2px solid #050000;
   border-width: 2px 0;
   padding: 15px 0;
 }
 
 .post-group-header {
-  font: 13px Sans-Serif;
+  font: 1.3rem Sans-Serif;
 }
 
 #page-bottom {
@@ -921,14 +921,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.65rem;
 }
 
+/*
 p {
-  margin: 0 0 1.5em;
+	margin: 0 0 $indent-val;
+	& + p {
+		//siblings indentation
+		text-indent: $indent-val;
+		margin-top: -$indent-val;
+	}
 }
-p + p {
-  text-indent: 1.5em;
-  margin-top: -1.5em;
-}
-
+*/
 abbr,
 acronym,
 blockquote,
@@ -1043,7 +1045,7 @@ h6 {
   counter-increment: definitions;
 }
 .dictionary-style dd:before {
-  content: counter(definitions,decimal) ". ";
+  content: counter(definitions, decimal) ". ";
 }
 
 /**
@@ -1155,6 +1157,10 @@ h6 {
  * Extend this object into your markup.
  *
  */
+html {
+  font-size: 62.5%;
+}
+
 body {
   font: 62.5%/1.6 Georgia, serif;
   background: #fffefe;
@@ -1179,7 +1185,7 @@ a:hover {
 
 /* Titles */
 .title, h1, h2, h3, h4, h5, h6, .widget-title {
-  font: 400 17px/1.3 Sans-Serif;
+  font: 400 1.7rem/1.3 Sans-Serif;
 }
 .title a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .widget-title a {
   color: #5d504f;
@@ -1189,16 +1195,16 @@ a:hover {
 }
 
 .title.large, h1.large, h2.large, h3.large, h4.large, h5.large, h6.large {
-  font-size: 20px;
+  font-size: 2em;
 }
 
 .title.small, h1.small, h2.small, h3.small, h4.small, h5.small, h6.small {
-  font: 700 13px/1.25 Sans-Serif;
+  font: 700 1.3rem/1.25 Sans-Serif;
 }
 
 /*Tables*/
 table {
-  font-size: 13px;
+  font-size: 1.3rem;
   margin: 15px 0;
 }
 
@@ -1235,7 +1241,7 @@ dl {
 }
 
 dt, dd {
-  font-size: 11px;
+  font-size: 1.1rem;
 }
 
 dt {
@@ -1279,7 +1285,7 @@ dd {
   width: 110px;
 }
 .pagination.small {
-  font: 13px Sans-Serif;
+  font: 1.3rem Sans-Serif;
 }
 .pagination.small .title, .pagination.small h1, .pagination.small h2, .pagination.small h3, .pagination.small h4, .pagination.small h5, .pagination.small h6 {
   font-weight: 700;
@@ -1318,7 +1324,7 @@ dd {
   display: none;
 }
 #search #search_form input {
-  font-size: 11px;
+  font-size: 1.1rem;
 }
 
 /*MOBILE*/
@@ -1331,57 +1337,50 @@ dd {
   }
 }
 .font-size-xx-large {
-  font-size: 28px;
+  font-size: 2.8rem;
 }
 
-.font-size-x-large, h1 {
-  font-size: 24px;
+.font-size-x-large {
+  font-size: 2.4rem;
 }
 
-.font-size-large, h2 {
-  font-size: 20px;
+.font-size-large {
+  font-size: 2em;
 }
 
-.font-size-medium, h3 {
-  font-size: 17px;
+.font-size-medium, p {
+  font-size: 1.7rem;
 }
 
-.font-size-small, h4, p, small {
-  font-size: 13px;
+.font-size-small, small {
+  font-size: 1.3rem;
 }
 
-.font-size-x-small, h5 {
-  font-size: 11px;
+.font-size-x-small {
+  font-size: 1.1rem;
 }
 
-.font-size-xx-small, h6 {
-  font-size: 10px;
+.font-size-xx-small {
+  font-size: 1rem;
 }
 
 /*Headers*/
 h1, h2, h3, h4, h5, h6 {
-  padding-top: 0px;
   margin-bottom: 15px;
-}
-h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
-  margin-top: 0;
 }
 
 /*Paragraph*/
 p {
-  margin: 15px 0;
+  margin: 0 0 1.5rem;
 }
-p:first-child {
-  margin-top: 0;
-}
-p:last-child {
-  margin-bottom: 0;
+p + p {
+  margin-top: 1.5rem;
 }
 
 /*Blockquote*/
 blockquote {
   color: #3d302f;
-  margin: 30px 0 30px 40px;
+  margin: 30px 80px 30px 40px;
 }
 blockquote p {
   font-size: inherit;
@@ -1401,7 +1400,7 @@ blockquote, q {
 }
 
 cite, blockquote[cite]:after, cite {
-  font: 13px Sans-Serif;
+  font: 1.3rem Sans-Serif;
 }
 
 blockquote[cite]:after {
@@ -1438,27 +1437,27 @@ pre {
 @media only screen and (max-width: 767px) {
   /*Typography*/
   h1 {
-    font-size: 24px;
+    font-size: 2.4rem;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 2em;
   }
 
   h3 {
-    font-size: 17px;
+    font-size: 1.7rem;
   }
 
   h4 {
-    font-size: 13px;
+    font-size: 1.3rem;
   }
 
   h5 {
-    font-size: 11px;
+    font-size: 1.1rem;
   }
 
   h6 {
-    font-size: 10px;
+    font-size: 1rem;
   }
 }
 /*Buttons*/
@@ -1468,7 +1467,7 @@ pre {
   color: #5d504f;
   padding: 8px 10px;
   border-radius: 2px;
-  font: 700 13px Sans-Serif;
+  font: 700 1.3rem Sans-Serif;
   text-align: center;
   border: 1px solid rgba(18, 7, 6, 0.2);
 }
@@ -1488,7 +1487,7 @@ pre {
 }
 
 .button.small {
-  font-size: 10px;
+  font-size: 1rem;
   padding: 4px 8px;
 }
 
@@ -1502,7 +1501,7 @@ pre {
 }
 /*Metadata content*/
 .metadata {
-  font: 11px Sans-Serif;
+  font: 1.1rem Sans-Serif;
 }
 .metadata a {
   color: #5d504f;
@@ -1588,14 +1587,14 @@ pre {
 }
 
 .wp-caption-text {
-  font-size: 13px !important;
+  font-size: 1.3rem !important;
   color: #5d504f;
   margin-top: 10px;
 }
 
 .gallery-caption {
   margin-left: 0 !important;
-  font: 11px/1.45 Sans-Serif !important;
+  font: 1.1rem/1.45 Sans-Serif !important;
 }
 
 .sticky .post-title:before {
@@ -1607,15 +1606,15 @@ pre {
 }
 
 .widget {
-  font-size: 11px;
+  font-size: 1.1rem;
   margin-bottom: 15px;
 }
 .widget p {
-  font-size: 11px;
+  font-size: 1.1rem;
 }
 
 .widget-title {
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 
 .widget.six.columns, .widget.three.columns, .widget.four.columns {
@@ -1635,7 +1634,7 @@ pre {
 input[type=text],
 textarea {
   border: 1px solid #5d504f;
-  font: 13px Sans-Serif;
+  font: 1.3rem Sans-Serif;
   color: #5d504f;
   padding: 3px 4px;
   box-shadow: inset 0px 0px 5px rgba(18, 7, 6, 0.2);
@@ -1668,13 +1667,13 @@ button, .button, input[type=submit] {
 }
 
 #site-title {
-  font-size: 24px;
+  font-size: 2.4rem;
   margin-bottom: 5px;
 }
 
 #site-description {
   margin-top: 0;
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 
 #site-nav {
@@ -1721,7 +1720,7 @@ button, .button, input[type=submit] {
   padding: 7px 30px 7px 10px;
   display: block;
   color: #050000;
-  font: 700 11px Sans-Serif;
+  font: 700 1.1rem Sans-Serif;
 }
 .menu-item a:hover {
   color: #5d504f;
@@ -1766,7 +1765,7 @@ button, .button, input[type=submit] {
     border-bottom: 1px solid #f0eceb;
   }
   #site-nav li a {
-    font-size: 13px;
+    font-size: 1.3rem;
     padding: 15px 0;
   }
   #site-nav li:last-child {
@@ -1782,7 +1781,7 @@ button, .button, input[type=submit] {
 }
 
 .post-title {
-  font-size: 20px;
+  font-size: 2em;
 }
 
 .post-header {
@@ -1790,16 +1789,16 @@ button, .button, input[type=submit] {
 }
 
 .post-content {
-  font: 17px/1.6 Georgia, serif;
+  font: 1.7rem/1.6 Georgia, serif;
 }
 .post-content p, .post-content li, .post-content dt, .post-content dd, .post-content blockquote {
-  font-size: 17px;
+  font-size: 1.7rem;
 }
 .post-content li {
   margin: 10px 0;
 }
 .post-content code, .post-content small {
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 .post-content img {
   max-width: 100%;
@@ -1824,7 +1823,7 @@ button, .button, input[type=submit] {
 /*MOBILE*/
 @media only screen and (max-width: 767px) {
   #content.home .post-group.oneup.large .post-content p {
-    font-size: 24px;
+    font-size: 2.4rem;
   }
 }
 .post-group-header {
@@ -1855,7 +1854,7 @@ button, .button, input[type=submit] {
   margin-top: 15px;
 }
 .post-group .read-more .more {
-  font-size: 11px;
+  font-size: 1.1rem;
 }
 
 .post-group.oneup.large section {
@@ -1863,7 +1862,7 @@ button, .button, input[type=submit] {
 }
 .post-group.oneup.large section p {
   font-style: italic;
-  font-size: 38px;
+  font-size: 3.8rem;
 }
 
 .post-group.twoup .post, .post-group.threeup .post, .post-group.fourup .post {
@@ -1871,14 +1870,14 @@ button, .button, input[type=submit] {
   float: left !important;
 }
 .post-group.twoup header h1, .post-group.threeup header h1, .post-group.fourup header h1 {
-  font-size: 13px;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 .post-group.twoup section p, .post-group.threeup section p, .post-group.fourup section p {
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 .post-group.twoup .metadata li, .post-group.threeup .metadata li, .post-group.fourup .metadata li {
-  font-size: 11px;
+  font-size: 1.1rem;
 }
 
 .post-group.twoup .post {
@@ -1894,16 +1893,16 @@ button, .button, input[type=submit] {
 }
 
 .post-group.threeup h2, .post-group.threeup h3, .post-group.fourup h2, .post-group.fourup h3 {
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 .post-group.threeup h4, .post-group.threeup h5, .post-group.threeup h6, .post-group.fourup h4, .post-group.fourup h5, .post-group.fourup h6 {
-  font-size: 11px;
+  font-size: 1.1rem;
 }
 .post-group.threeup h2, .post-group.threeup h4, .post-group.fourup h2, .post-group.fourup h4 {
   font-weight: 700;
 }
 .post-group.threeup li, .post-group.threeup dl, .post-group.threeup code, .post-group.threeup blockquote, .post-group.threeup blockquote p, .post-group.fourup li, .post-group.fourup dl, .post-group.fourup code, .post-group.fourup blockquote, .post-group.fourup blockquote p {
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 
 /* TODO: Try this pattern out :not(:last-child) */
@@ -1927,7 +1926,7 @@ button, .button, input[type=submit] {
   font: italic 1em Georgia, serif;
 }
 #prev-post a {
-  font-size: 13px;
+  font-size: 1.3rem;
   display: block;
   text-align: center;
 }
@@ -1964,7 +1963,7 @@ button, .button, input[type=submit] {
 }
 .single #excerpt p {
   padding-top: 0;
-  font: italic 28px/1.55 Georgia, serif;
+  font: italic 2.8rem/1.55 Georgia, serif;
 }
 .single .pagination {
   margin-top: 30px;
@@ -1982,11 +1981,11 @@ button, .button, input[type=submit] {
   padding: 0;
 }
 .single .post-content h1 {
-  font-size: 20px;
+  font-size: 2em;
   margin-top: 30px;
 }
 .single .post-content h2 {
-  font-size: 17px;
+  font-size: 1.7rem;
   font-weight: 700;
 }
 .single .post-content dd {
@@ -2082,7 +2081,7 @@ button, .button, input[type=submit] {
 
 .no_comments, .comments_closed {
   margin: 30px 0;
-  font: italic 28px/1.25 Georgia, serif;
+  font: italic 2.8rem/1.25 Georgia, serif;
   color: #5d504f;
 }
 
@@ -2099,11 +2098,11 @@ button, .button, input[type=submit] {
   font-family: Georgia, serif;
 }
 .comment-content blockquote, .comment-content blockquote p {
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 
 .comment-reply-link {
-  font: 700 11px Sans-Serif;
+  font: 700 1.1rem Sans-Serif;
 }
 
 .comment-info {
@@ -2209,6 +2208,9 @@ button, .button, input[type=submit] {
 #page-footer {
   padding: 30px 0;
   margin-top: 30px;
+}
+#page-footer h3 {
+  color: #fffefe;
 }
 #page-footer a {
   color: #fffefe;

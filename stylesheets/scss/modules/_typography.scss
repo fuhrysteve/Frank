@@ -9,32 +9,23 @@
 /*Headers*/
 h1, h2, h3, h4, h5, h6 {
 	@extend .title;
-	padding-top: 0px; 
-	margin-bottom: $row-height; 
-	&:first-child {
-		margin-top: 0;
-	}
+	margin-bottom: $row-height;
 }
-h1 { @extend .font-size-x-large; }
-h2 { @extend .font-size-large; }
-h3 { @extend .font-size-medium; }
-h4 { @extend .font-size-small; }
-h5 { @extend .font-size-x-small; }
-h6 { @extend .font-size-xx-small; }
 
 /*Paragraph*/
 p {
-	margin: $row-height 0;
-	@extend .font-size-small; 
-	&:first-child { margin-top: 0; }
-	&:last-child { margin-bottom: 0; }
+	@extend .font-size-medium;
+	margin: 0 0 1.5rem;
+	& + p {
+		margin-top:1.5rem;
+	}
 }
 
 /*Blockquote*/
+
 blockquote {
 	color: $color-dark;
-	@extend %vertical-border-break-dark;
-	margin: ($row-height * 2) 0 ($row-height * 2) $gutter-width;
+	margin: ($row-height * 2) ($gutter-width * 2) ($row-height * 2) $gutter-width;
 	p {
 		font-size: inherit;
 		line-height: inherit;
@@ -47,8 +38,8 @@ blockquote > p:first-child::before {
 blockquote > p:last-child::after {
 	content: close-quote;
 }
-blockquote, q { 
-	quotes: "“" "”" ; 
+blockquote, q {
+	quotes: "“" "”" ;
 }
 
 cite, blockquote[cite]:after, cite {
@@ -58,14 +49,16 @@ blockquote[cite]:after {
 	content: "—" attr(cite);
 	display: block;
 	color: $color-off-black;
-	margin-top: $row-height; 
+	margin-top: $row-height;
 }
 cite {
 	margin-left: $gutter-width;
 	margin-top: -1em;
-	margin-bottom: 2em; 
+	margin-bottom: 2em;
 	&:before { content: "—"; }
 }
+
+
 
 /*Pre & Code*/
 pre, code {
@@ -78,7 +71,6 @@ pre, code {
 pre { /*Merge with Blockquote?*/
 	@extend %vertical-border-break-dark;
 	margin: ($row-height * 2) 0 ($row-height * 2) $gutter-width;
-	
 }
 
 small { @extend .font-size-small; }

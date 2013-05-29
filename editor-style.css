@@ -769,8 +769,12 @@ img, video {
 }
 html .mceContentBody {
   max-width: 535px;
-  font: 17px/1.6 Georgia, serif;
+  font: 1.7rem/1.6 Georgia, serif;
   margin: 10px;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -797,7 +801,7 @@ a:hover {
 
 /* Titles */
 .title, .widget-title {
-  font: 400 17px/1.3 Sans-Serif;
+  font: 400 1.7rem/1.3 Sans-Serif;
 }
 .title a, .widget-title a {
   color: #5d504f;
@@ -807,16 +811,16 @@ a:hover {
 }
 
 .title.large {
-  font-size: 20px;
+  font-size: 2em;
 }
 
 .title.small {
-  font: 700 13px/1.25 Sans-Serif;
+  font: 700 1.3rem/1.25 Sans-Serif;
 }
 
 /*Tables*/
 table {
-  font-size: 13px;
+  font-size: 1.3rem;
   margin: 15px 0;
 }
 
@@ -853,7 +857,7 @@ dl {
 }
 
 dt, dd {
-  font-size: 11px;
+  font-size: 1.1rem;
 }
 
 dt {
@@ -897,7 +901,7 @@ dd {
   width: 110px;
 }
 .pagination.small {
-  font: 13px Sans-Serif;
+  font: 1.3rem Sans-Serif;
 }
 .pagination.small .title {
   font-weight: 700;
@@ -936,7 +940,7 @@ dd {
   display: none;
 }
 #search #search_form input {
-  font-size: 11px;
+  font-size: 1.1rem;
 }
 
 /*MOBILE*/
@@ -953,11 +957,11 @@ img.mceWPmore {
 }
 
 p, ul li, ol li, dt, dd, blockquote {
-  font-size: 17px;
+  font-size: 1.7rem;
 }
 
 code, small {
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 
 img {
@@ -970,12 +974,12 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 2em;
   margin-top: 30px;
 }
 
 h2 {
-  font-size: 17px;
+  font-size: 1.7rem;
   font-weight: 700;
 }
 
@@ -988,7 +992,7 @@ dd {
 }
 
 blockquote.large p {
-  font-size: 20px;
+  font-size: 2em;
 }
 
 img.flush-left, video.flush-left {

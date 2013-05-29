@@ -249,7 +249,7 @@ module.exports = function(grunt) {
             files: '<%= frank.coffeescripts %>/*.coffee',
             tasks: ['coffee']
           }
-        },
+        }
     });
 
     // load all grunt tasks
