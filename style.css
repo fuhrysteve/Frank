@@ -419,6 +419,15 @@ table {
   position: relative;
 }
 
+.post {
+    -moz-border-radius-topright: 100px;
+    border-top-right-radius: 100px;
+    -moz-border-radius-topleft: 100px;
+    border-top-left-radius: 100px;
+    background:#DCDCDC;
+    padding: 45px;
+}
+
 .column:first-child, #content-primary:first-child, .post.leftaside .post-content:first-child, .type-page.leftaside .post-content:first-child, .post.leftaside .post-info:first-child, .type-page.leftaside .post-info:first-child, .post-group.twoup .post:first-child, .post-group.threeup .post:first-child, .post-group.fourup .post:first-child, #sidebar:first-child, #comment-form-logged-in-as:first-child, #comment-form-info:first-child, #comment-form-content:first-child, .comment-content:first-child, .comment-info:first-child, #comment-form-allowed-tags:first-child, .columns:first-child {
   margin-left: 0;
 }
